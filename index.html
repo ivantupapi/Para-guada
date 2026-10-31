@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090d2b"><title>Para Guada 💗</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:white;text-align:center;font-family:Georgia,serif;background:radial-gradient(ellipse at 50% 12%,#29346b,#11183f 42%,#050817 100%);overflow-x:hidden}
+#stars{position:fixed;inset:0;pointer-events:none}.star{position:absolute;width:2px;height:2px;background:white;border-radius:50%;animation:twinkle 2.8s infinite ease-in-out}
+@keyframes twinkle{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1.5)}}
+main{position:relative;width:min(92%,620px);margin:auto;padding:38px 0 50px}.moon{width:108px;height:108px;border-radius:50%;background:#fff2c9;box-shadow:0 0 25px #fff0bb,0 0 85px #ffe9a866;margin:10px auto 28px;position:relative}.moon:after{content:"";position:absolute;width:100px;height:100px;border-radius:50%;background:#202957;top:-9px;left:27px}
+.eyebrow{font:11px Arial;letter-spacing:.22em;text-transform:uppercase;color:#dedaff}h1{font-size:clamp(2.8rem,10vw,4.3rem);font-weight:normal;margin:12px 0;text-shadow:0 0 24px #e6c9ff88}.intro{color:#e4e2f5;line-height:1.7;font-size:1.08rem;margin:0 auto 25px}
+.panel{background:#ffffff12;border:1px solid #ffffff30;border-radius:22px;padding:22px 18px;margin:18px 0;backdrop-filter:blur(8px)}h2{font-weight:normal;font-size:1.5rem;margin:2px 0 15px}.buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+button{border:1px solid #ffffff50;border-radius:14px;padding:13px 10px;color:white;background:#b9a4ff20;font-size:.95rem;cursor:pointer}button:hover{background:#d8c8ff38}
+#message{min-height:90px;display:flex;align-items:center;justify-content:center;padding:18px 8px 4px;color:#fff0ce;line-height:1.7;font-size:1.1rem}
+#final{display:none;color:#fff0ce;font-size:1.1rem;line-height:1.8}#final.show{display:block;animation:appear .7s ease} @keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+footer{color:#c9c8df;font:12px Arial;margin-top:28px}@media(max-width:380px){.buttons{grid-template-columns:1fr}}
+</style></head><body><div id="stars"></div><main>
+<div class="moon"></div><div class="eyebrow">Una pequeña sorpresa para</div><h1>Guada ♡</h1>
+<p class="intro">Quería regalarte algo distinto, así que preparé este rinconcito del universo para vos. Tocá cada botón y descubrí lo que tengo para decirte.</p>
+<section class="panel"><h2>✨ Abrí un mensajito</h2><div class="buttons">
+<button onclick="reveal(0)">Cuando me extrañes 💌</button><button onclick="reveal(1)">Cuando tengas un mal día 🌷</button>
+<button onclick="reveal(2)">Cuando necesites sonreír ☀️</button><button onclick="reveal(3)">Antes de dormir 🌙</button>
+<button onclick="reveal(4)">Cuando pienses en nosotros 💗</button><button onclick="reveal(5)">Porque sí, te amo ❤️</button>
+</div><div id="message" aria-live="polite">Elegí uno de los botones… hay palabras guardadas para vos. ✨</div></section>
+<section class="panel"><button style="width:100%" onclick="document.getElementById('final').classList.add('show')">Tengo una última cosa para vos… 💫</button>
+<div id="final"><p>Guada, gracias por llegar a mi vida y hacer que mis días tengan algo tan lindo. Me encanta compartir mis momentos con vos, hablar de cualquier cosa y seguir construyendo lo nuestro, pasito a pasito.<br><br>Ojalá pudiera regalarte todas las estrellas de este cielo, pero por ahora te regalo estas palabras y todo el cariño que llevan.<br><br><strong>Te amo muchísimo. Feliz de tenerte en mi vida. ❤️</strong></p></div></section>
+<footer>Hecho con cariño, especialmente para vos · ♡</footer></main>
+<script>
+for(let i=0;i<95;i++){let s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*3+'s';s.style.opacity=.25+Math.random()*.7;document.getElementById('stars').appendChild(s)}
+const m=[
+'Aunque ahora no estemos cerquita, quiero que sepas que te llevo conmigo. Ya va a llegar el momento de compartir muchos abrazos y momentos juntos. 💗',
+'No todos los días tienen que ser perfectos. Andá a tu ritmo y acordate de que sos una persona muy especial para mí. Estoy de tu lado. 🌷',
+'Por si hoy te falta un motivo: sos mi persona favorita para hablar, reírme y compartir mis días. Me sacás sonrisas incluso desde lejos. ☀️',
+'Que descanses, mi amor. Ojalá tengas una noche tranquila y mañana te espere un día más lindo. Te mando un beso enorme. 🌙',
+'Me gusta lo que estamos construyendo, nuestras charlas y cada pequeño momento. Quiero seguir eligiéndonos y conociéndonos cada día un poquito más. 💞',
+'No hace falta una fecha especial para recordártelo: te amo, Guada. Gracias por ser parte de mi vida y por hacerla un poquito más linda. ❤️'];
+function reveal(i){document.getElementById('message').textContent=m[i]}
+</script></body></html>
